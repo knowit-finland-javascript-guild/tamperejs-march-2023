@@ -4,7 +4,7 @@ import { within, userEvent } from "@storybook/testing-library";
 import { Page } from "./Page";
 
 export default {
-  title: "Example/Page",
+  title: "Views/Page",
   component: Page,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
@@ -12,7 +12,7 @@ export default {
   },
 } as ComponentMeta<typeof Page>;
 
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+const Template: ComponentStory<typeof Page> = () => <Page />;
 
 export const LoggedOut = Template.bind({});
 
