@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 
-import { Page } from "views/Page";
+import { AppLayout } from "views/AppLayout";
 
 const App = () => {
-  return <Page />;
+  return <AppLayout />;
 };
 
 export default App;
