@@ -19,6 +19,10 @@ and we're good to go :)
 
 Components are located in `src/components`. Each component and their related files are located there.
 
+## View components
+
+View components are located in `src/views`
+
 ## Stories
 
 Component stories are written as Component story format (CFD). Stories are located at component folders. E.g. `src/components/Button/Button.stories.tsx`
