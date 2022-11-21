@@ -26,9 +26,13 @@ export const Header = ({ user, header = "Acme", onLogin, onLogout, onCreateAccou
       <div>
         {user ? (
           <>
-            <span className="welcome">
-              Welcome, <b>{user.name}</b>!
-            </span>
+            {user.name ? (
+              <span className="welcome">
+                Welcome, <b>{user.name}</b>!
+              </span>
+            ) : (
+              <span> Error: user name not defined</span>
+            )}
             <Button size="small" onClick={onLogout} label="Log out" />
           </>
         ) : (

@@ -1,13 +1,14 @@
 import React from "react";
+import "./page.css";
 
 import { Header, User } from "components/Header";
-import "./page.css";
 
 export const Page = () => {
   const [user, setUser] = React.useState<User>();
 
   return (
     <article>
+      {/* TODO: Oh, each page has own header? Not very practical? */}
       <Header
         user={user}
         onLogin={() => setUser({ name: "Jane Doe" })}
@@ -15,8 +16,12 @@ export const Page = () => {
         onCreateAccount={() => setUser({ name: "Jane Doe" })}
       />
 
+      {/* This header-content-footer layout looks nice. Might be reusable, don't you think? */}
       <section>
+        {/* Page Header */}
         <h2>Pages in Storybook</h2>
+
+        {/* Page content */}
         <p>
           We recommend building UIs with a{" "}
           <a href="https://componentdriven.org" target="_blank" rel="noopener noreferrer">
@@ -45,8 +50,10 @@ export const Page = () => {
           </a>
           .
         </p>
+
+        {/* Content footer */}
         <div className="tip-wrapper">
-          <span className="tip">Tip</span> Adjust the width of the canvas with the{" "}
+          <span className="tip">Tip</span> Adjust the width of the canvas with the
           <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
               <path
