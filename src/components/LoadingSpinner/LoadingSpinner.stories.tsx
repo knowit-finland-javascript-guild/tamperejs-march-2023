@@ -8,6 +8,6 @@ export default {
   component: LoadingSpinner,
 } as ComponentMeta<typeof LoadingSpinner>;
 
-const Template: ComponentStory<typeof LoadingSpinner> = (args) => <LoadingSpinner />;
+const Template: ComponentStory<typeof LoadingSpinner> = () => <LoadingSpinner />;
 
 export const Default = Template.bind({});
