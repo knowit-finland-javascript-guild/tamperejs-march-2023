@@ -9,10 +9,15 @@ export interface User {
 }
 
 interface HeaderProps {
+  /** User props */
   user?: User;
+  /** Header */
   header?: string;
+  /** Login function */
   onLogin: () => void;
+  /** Logout function */
   onLogout: () => void;
+  /** Create account function */
   onCreateAccount: () => void;
 }
 

@@ -3,6 +3,7 @@ import React from "react";
 import "./logo.css";
 
 interface LogoProps {
+  /** Logo size */
   size?: "16" | "32" | "64";
 }
 

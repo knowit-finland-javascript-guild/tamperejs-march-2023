@@ -4,9 +4,11 @@ import { Meta } from "@storybook/addon-docs";
 
 # Workshop tasks
 
-1. Divide `src/views/Applayout` into components. Create atleast one new component.
-2. Create story or multiple stories for new component(s)
-   - Try default properties
-   - Make each variant different by properties
-3. Test you changes on react app. 👉 `src/App.tsx`
-4. Create error handling for your component
+1. Divide text content from `src/views/Applayout` into `src/views/WelcomePage` component and use `Page` component to wrap the content.
+   `Page` component is a wrapper component that wraps right styles to cotent.
+2. Create `Welcome` story for `Page` component. See existing `Page1` example.
+   - Bonus: Try default properties and set default header. See example in `Button` component stories.
+3. Test you changes on react app. 👉 `src/App.tsx`. (`npm start`)
+4. Create error and loading handling for `Page` component. Display error text if error prop is true.
+   Display loading if loading is true. Display content if `error && loading === false`.
+5. BONUS: Try to create `Select` component and stories for it. See `Button` component example how to wrap html component.
