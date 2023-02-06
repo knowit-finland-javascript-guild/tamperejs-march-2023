@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import "./page.css";
+import { LoadingSpinner } from "components/LoadingSpinner";
 
 interface ErrorProps {
   /** Error message */
@@ -15,11 +16,17 @@ interface PageProps extends PropsWithChildren {
   error?: ErrorProps;
 }
 
-export const Page = ({ header, children }: PageProps) => {
+export const Page = ({ header, children, loading, error }: PageProps) => {
   return (
-    <section>
-      <h2>{header}</h2>
-      <>{children}</>
-    </section>
+    <>
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <section>
+          <h2>{header}</h2>
+          {error?.errorText ? <p style={{ color: "red" }}>Error</p> : <>{children}</>}
+        </section>
+      )}
+    </>
   );
 };
