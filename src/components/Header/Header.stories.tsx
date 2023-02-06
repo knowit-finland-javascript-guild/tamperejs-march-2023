@@ -23,3 +23,11 @@ LoggedIn.args = {
 
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {};
+
+export const Inaccessible = Template.bind({});
+Inaccessible.args = {
+  user: {
+    name: "Jane Doe",
+  },
+  header: "",
+};
