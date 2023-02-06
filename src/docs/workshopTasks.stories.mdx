@@ -1,14 +1,10 @@
 import { Meta } from "@storybook/addon-docs";
 
-<Meta title="Docs/Workshop tasks" />
+<Meta title="Docs/Stuff to try out" />
 
-# Workshop tasks
+# Stuff to try out
 
-1. Divide text content from `src/views/Applayout` into `src/views/WelcomePage` component and use `Page` component to wrap the content.
-   `Page` component is a wrapper component that wraps right styles to cotent.
-2. Create `Welcome` story for `Page` component. See existing `Page1` example.
-   - Bonus: Try default properties and set default header. See example in `Button` component stories.
-3. Test you changes on react app. 👉 `src/App.tsx`. (`npm start`)
-4. Create error and loading handling for `Page` component. Display error text if error prop is true.
-   Display loading if loading is true. Display content if `error && loading === false`.
-5. BONUS: Try to create `Select` component and stories for it. See `Button` component example how to wrap html component.
+1. Header has to be repeated for every view. Figure out a way around that and update the stories!
+2. Create a `Select` component and stories for it. See `Button` component example on how to wrap a html component.
+3. Publish your Storybook to GitHub pages. See: [pipeline](https://dev.to/kouts/deploy-storybook-to-github-pages-3bij)
+   and [npm package](https://medium.com/swlh/how-to-deploy-storybook-to-github-pages-4894097d49ab)
