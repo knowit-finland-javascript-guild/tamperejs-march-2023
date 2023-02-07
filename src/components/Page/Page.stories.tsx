@@ -73,3 +73,18 @@ PageError.args = {
     errorText: "Oh no a network error has happened",
   },
 };
+
+export const PageAccessibilityViolations = Template.bind({});
+PageAccessibilityViolations.args = {
+  header: "Here's a cool accessibility violation",
+  children: (
+    <>
+      <h1>I'm H1</h1>
+      <h3>I'm H3</h3>
+      <h3></h3>
+      <p id="id1">I have an id</p>
+      <p id="id1">I also have the same id</p>
+    </>
+  ),
+  loading: false,
+};
