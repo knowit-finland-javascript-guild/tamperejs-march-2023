@@ -7,6 +7,10 @@
   display: inline-block;
   line-height: 1;
 }
+.storybook-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 .storybook-button--primary {
   color: white;
   background-color: #1ea7fd;

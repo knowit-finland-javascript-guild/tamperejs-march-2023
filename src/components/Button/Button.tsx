@@ -22,15 +22,20 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * Is the button disabled?
+   */
+  disabled?: boolean;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary = false, size = "medium", backgroundColor, label, ...props }: ButtonProps) => {
+export const Button = ({ primary = false, size = "medium", backgroundColor, label, disabled, ...props }: ButtonProps) => {
   const mode = primary ? "storybook-button--primary" : "storybook-button--secondary";
   return (
     <button
+      disabled={disabled}
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(" ")}
       style={{ backgroundColor }}
