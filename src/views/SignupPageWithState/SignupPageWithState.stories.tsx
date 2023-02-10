@@ -3,11 +3,11 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { within, userEvent, waitFor } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 
-import { SignupPage } from "./SignupPage";
+import { SignupPageWithState } from "./SignupPageWithState";
 
 export default {
-  title: "Views/SignupPage",
-  component: SignupPage,
+  title: "Views/SignupPageWithState",
+  component: SignupPageWithState,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
@@ -15,9 +15,9 @@ export default {
   argTypes: {
     onSignup: { action: true },
   },
-} as ComponentMeta<typeof SignupPage>;
+} as ComponentMeta<typeof SignupPageWithState>;
 
-const Template: ComponentStory<typeof SignupPage> = (args) => <SignupPage {...args} />;
+const Template: ComponentStory<typeof SignupPageWithState> = (args) => <SignupPageWithState {...args} />;
 
 export const Default = Template.bind({});
 

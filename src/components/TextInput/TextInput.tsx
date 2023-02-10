@@ -9,9 +9,10 @@ interface TextInputProps {
   onChange: (value: string) => void;
   type?: InputType;
   error?: boolean;
+  emoji?: string;
 }
 
-export const TextInput = ({ label, id, value, onChange, type = "text", error }: TextInputProps) => {
+export const TextInput = ({ label, id, value, onChange, type = "text", error, emoji }: TextInputProps) => {
   return (
     <div style={{ display: "block" }}>
       <label htmlFor={label} style={{ marginRight: "5px" }}>
@@ -25,6 +26,7 @@ export const TextInput = ({ label, id, value, onChange, type = "text", error }: 
         style={error ? { backgroundColor: "red" } : {}}
         value={value}
       />
+      {emoji && <div style={{ display: "inline" }}>{emoji}</div>}
     </div>
   );
 };

@@ -6,25 +6,57 @@ import { Meta } from "@storybook/addon-docs";
 
 1. Controls
 
-- Basic controls
-- Controls in URL parameters
-- More complex controls (color picker in Button)
-- Bad controls (Header, Page1)
-- Complex states (Page Loading Error, AppLayout things)
+- Controls in Button
+- URL parameters
 
 2. Accessibility
 
-- Contrast (Primary button, fix with color picker)
+- Contrast in Primary button
 - Page Accessibility Violations
 
 3. Interaction testing (Interactions Button)
 
+- Uses React Testing library
 - What happens with manual testing
 - One `play` per story
 - Manual controls
 
 4. Visual Testing
 
-- Make change to Button styles
-- Run Chromatic (command from OneNote)
 - Check Chromatic https://www.chromatic.com/build?appId=63e1fd8cff45f0eab46abc01
+- CLI, run a single command to compile Storybook, take screenshots and upload them to the web ui
+
+5. Sign up page with internal state
+
+- Pros:
+  - Less props - cleaner interface
+  - Most likely the way you intuitively write components
+- Cons:
+  - Only works for simple pages
+
+6. Sign up page without internal state
+
+- Pros:
+  - Great at hiding complexity
+    - Duplicate usernames might be checked on an interval
+    - Passwords checked against most common passwords
+    - Usage data gathered, how many people quit signing up at certain points
+  - Clean workflow - Interface --> Story --> UI
+- Cons:
+  - Lots of props even now - what about with localizations
+  - Extra effort for an interactive story
+  - Extra effort for interaction testing
+
+7. Other things to note
+
+- Both pages required an onSignup function as a prop
+- Both pages could be imported to any project necessary
+- Visual regression testing makes sure that changes to components don't accidentally modify the UI
+- We got basic accessibility testing basically for free
+- We didn't get a chance to talk about a lot of things
+  - Versioning
+  - Package distributing
+  - Monorepo vs independent repos
+  - Adding props vs creating a new component
+  - Design Systems
+  - Communicating with other teams using the components
