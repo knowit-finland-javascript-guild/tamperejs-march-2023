@@ -12,7 +12,7 @@ You need to run following steps to run storybook on this project:
 
 - `npm install`
 - `npm run storybook`
-- Navigate to <http://localhost:3000/>
+- Navigate to <http://localhost:6006/>
 
 and we're good to go :)
 
@@ -31,4 +31,4 @@ Component stories are written as Component story format (CFD). Stories are locat
 ## Test your components on react app
 
 - `npm start`
-- Navigate to <http://localhost:6006/>
+- Navigate to <http://localhost:3000/>
