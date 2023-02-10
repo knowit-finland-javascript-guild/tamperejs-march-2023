@@ -1,14 +1,14 @@
 # Introduction to storybook
 
-This repository contains all the material that is used on Introduction to storybook workshop
+This repository contains all the materials that are used in the TampereJS March 2023 meetup
 
-## prerequisites
+## Prerequisites
 
-Node.js v14.19.3 or newer
+Node.js installed, tested on v18.12.1
 
 ## Storybook installation and usage
 
-You need to run following steps to run storybook on this project:
+You need to run following steps to run Storybook on this project:
 
 - `npm install`
 - `npm run storybook`
