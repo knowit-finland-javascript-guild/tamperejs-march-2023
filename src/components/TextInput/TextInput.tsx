@@ -15,7 +15,7 @@ interface TextInputProps {
 export const TextInput = ({ label, id, value, onChange, type = "text", error, emoji }: TextInputProps) => {
   return (
     <div style={{ display: "block" }}>
-      <label htmlFor={label} style={{ marginRight: "5px" }}>
+      <label htmlFor={id} style={{ marginRight: "5px" }}>
         {label}:
       </label>
       <input

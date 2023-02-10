@@ -32,8 +32,6 @@ export const SignupPage = ({
   const passwordsMatch = passwordsFilled && password1 === password2;
   const isSignupEnabled = allFieldsFilled && passwordsMatch && !error && !duplicateUsername;
 
-  // TODO: !passwordsMatch && passwordsFilled is repeated multiple times
-
   return (
     <Page header="Sign up now!">
       {duplicateUsername && <p>There already exists an user with that name</p>}
