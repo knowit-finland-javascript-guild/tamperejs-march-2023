@@ -55,7 +55,7 @@ export const SignupPageWithState = ({ onSignup, error, duplicateUsername, loadin
             emoji={passwordsMatch ? "💕" : ""}
             error={!passwordsMatch && passwordsFilled}
           />
-          {!passwordsMatch && passwordsFilled && <p style={{ backgroundColor: "red" }}>Passwords do not match</p>}
+          {!passwordsMatch && passwordsFilled && <p style={{ backgroundColor: "greenyellow" }}>Passwords do not match</p>}
           <Button label="Sign up" onClick={() => onSignup(username, password1)} disabled={!isSignupEnabled} primary={true} />
           {error && <p style={{ backgroundColor: "red" }}>Oh no something went wrong. Please try again later</p>}
         </Page>
