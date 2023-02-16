@@ -4,28 +4,19 @@ import { Meta } from "@storybook/addon-docs";
 
 # Super secret notes to self
 
-1. Controls
-
-- Controls in Button
-- URL parameters
-
-2. Accessibility
-
-- Contrast in Primary button
-
-3. Interaction testing (Interactions Button)
-
-- Uses React Testing library
-- One `play` per story
-- Manual controls
-
-4. Visual Testing
+1. Visual Testing
 
 - Check Chromatic https://www.chromatic.com/build?appId=63e1fd8cff45f0eab46abc01
-- CLI, run a single command to compile Storybook, take screenshots and upload them to the web ui
-- Integrate to CI/CD pipeline
+- I used CLI, run a single command to compile Storybook, take screenshots and upload them to the web ui
+- In real projects integrate to CI/CD pipeline
 
-5. Sign up page with internal state
+2. Interaction & accessibility testing + basic controls
+
+- Show both sign up pages from the code
+- Check sign up page with internal state
+- Show the story configurations
+
+3. Sign up page with internal state
 
 - Pros:
   - Less props - cleaner interface
@@ -33,7 +24,7 @@ import { Meta } from "@storybook/addon-docs";
 - Cons:
   - Only works for simple pages
 
-6. Sign up page without internal state
+4. Sign up page without internal state
 
 - Pros:
   - Great at separating complexity
@@ -45,7 +36,7 @@ import { Meta } from "@storybook/addon-docs";
   - Lots of props even now - what about with localizations or more complex components
   - Extra effort for an interactive story and interaction testing
 
-7. Other things to note
+5. Other things to note
 
 - Both pages required an onSignup function as a prop
   - Could be imported to any project necessary
@@ -57,7 +48,7 @@ import { Meta } from "@storybook/addon-docs";
     - Public NPM
     - Privately hosted NPM
     - Bit.dev
-  - Monorepo vs independent repos
+  - Monorepo vs polyrepo
   - Adding props vs creating a new component
   - Design Systems
   - Communicating with other teams using the components

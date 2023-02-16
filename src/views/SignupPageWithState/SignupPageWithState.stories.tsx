@@ -21,6 +21,11 @@ const Template: ComponentStory<typeof SignupPageWithState> = (args) => <SignupPa
 
 export const Default = Template.bind({});
 
+export const Loading = Template.bind({});
+Loading.args = {
+  loading: true,
+};
+
 export const Submitted = Template.bind({});
 Submitted.play = async ({ args, canvasElement }) => {
   const canvas = within(canvasElement);

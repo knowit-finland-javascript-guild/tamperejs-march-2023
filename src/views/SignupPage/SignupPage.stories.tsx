@@ -34,6 +34,11 @@ const Template: ComponentStory<typeof SignupPage> = (args) => <SignupPage {...ar
 
 export const Default = Template.bind({});
 
+export const Loading = Template.bind({});
+Loading.args = {
+  loading: true,
+};
+
 export const CorrectlyFilled = Template.bind({});
 CorrectlyFilled.args = {
   ...createProps(),
