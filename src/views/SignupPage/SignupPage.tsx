@@ -70,7 +70,7 @@ export const SignupPage = ({
           />
           {!passwordsMatch && passwordsFilled && <p style={{ backgroundColor: "red" }}>Passwords do not match</p>}
           <Button label="Sign up" onClick={() => onSignup(username, password1)} disabled={!isSignupEnabled} primary={true} />
-          {error && <p style={{ backgroundColor: "red" }}>Oh no something went wrong. Please try again later</p>}
+          {error && <p style={{ backgroundColor: "yellow" }}>Oh no something went wrong. Please try again later</p>}
         </Page>
       )}
     </>
