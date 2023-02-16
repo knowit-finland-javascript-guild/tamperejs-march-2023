@@ -71,3 +71,17 @@ ErrorMessage.play = async ({ args, canvasElement }) => {
   await waitFor(() => expect(args.onSignup).toHaveBeenCalledTimes(0));
   await expect(canvas.getByText("Oh no something went wrong. Please try again later")).toBeInTheDocument();
 };
+
+export const PasswordsDontMatch = Template.bind({});
+
+PasswordsDontMatch.play = async ({ args, canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  await userEvent.type(canvas.getByTestId("username-input"), "hi@example.com");
+  await userEvent.type(canvas.getByTestId("password1-input"), "supersecret");
+  await userEvent.type(canvas.getByTestId("password2-input"), "notthesame");
+  await userEvent.click(canvas.getByRole("button"));
+
+  await waitFor(() => expect(args.onSignup).toHaveBeenCalledTimes(0));
+  await expect(canvas.getByText("Passwords do not match")).toBeInTheDocument();
+};
