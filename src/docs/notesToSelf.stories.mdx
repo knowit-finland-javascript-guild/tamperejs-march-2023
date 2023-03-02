@@ -7,7 +7,7 @@ import { Meta } from "@storybook/addon-docs";
 1. Visual Testing
 
 - Check Chromatic https://www.chromatic.com/build?appId=63e1fd8cff45f0eab46abc01
-- I used CLI, run a single command to compile Storybook, take screenshots and upload them to the web ui
+- I used CLI, run a single command to compile Storybook, run interaction tests, take screenshots and upload them to the web ui
 - In real projects integrate to CI/CD pipeline
 
 2. Interaction & accessibility testing + basic controls
@@ -31,9 +31,9 @@ import { Meta } from "@storybook/addon-docs";
     - Passwords checked against most common passwords
     - Password matching could be lifted up and delay added to it without cluttering the component
     - Usage data gathered, how many people quit signing up at certain points
-  - Clean workflow - Interface --> Story --> UI
+  - Clean workflow - Interface --> Story --> UI --> (Interface -->) Story --> UI --> ...
 - Cons:
-  - Lots of props even now - what about with localizations or more complex components
+  - Lots of props even now - what about with localizations or more complex pages
   - Extra effort for an interactive story and interaction testing
 
 5. Other things to note
